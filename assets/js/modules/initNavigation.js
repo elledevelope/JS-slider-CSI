@@ -10,8 +10,27 @@ const createNavBtn = (className, faClass) => {
 };
 
 const initNavigation = () => {
-    const divNext = createNavBtn("divNext", "fa-caret-right");
     const divPrev = createNavBtn("divPrev", "fa-caret-left");
+    // divPrev.addEventListener("click", () => {
+    //     if (currentImg === dataSlider.length + 1) {
+    //         currentImg = 0;
+    //     } else {
+    //         currentImg--;
+    //     };
+    //     document.querySelector(".moveImg").src = dataSlider[currentImg].urlImg;
+    //     document.querySelector(".fixedImg").classList.add("slide-left");
+    // });
+
+    const divNext = createNavBtn("divNext", "fa-caret-right");
+    divNext.addEventListener("click", () => {
+        if (currentImg === dataSlider.length - 1) {
+            currentImg = 0;
+        } else {
+            currentImg++;
+        };
+        document.querySelector(".fixedImg").src = dataSlider[currentImg].urlImg;
+        document.querySelector(".moveImg").classList.add("slide-right");
+    });
 };
 
 export { initNavigation };

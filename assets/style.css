@@ -21,11 +21,11 @@ input {
 
 #carousel {
     border: 1px lightseagreen dotted;
-}
-
-#carousel {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .moveImg {
@@ -36,7 +36,27 @@ input {
     transition: all .5s;
 }
 
+.divNext,
+.divPrev {
+    z-index: 100;
+}
+
+.divPrev {
+    position: absolute;
+    left: 10px;
+}
+
+.divNext :hover,
+.divPrev :hover {
+    cursor: pointer;
+    color: rgb(55, 133, 33);
+}
+
 i {
-    width: 20px;
-    height: 20px;
+    font-size: 60px;
+    color: rgba(55, 133, 33, 0.596);
+}
+
+.slide-right{
+    transform: translateX(200%);
 }

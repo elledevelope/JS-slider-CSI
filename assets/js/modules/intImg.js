@@ -13,7 +13,7 @@ const initImg = () => {
     carousel.append(moveImage);
 
     fixedImage.width = moveImage.width = 300;
-    fixedImage.height = moveImage.height = 300;
+    fixedImage.height = moveImage.height = 500;
 };
 
 export { initImg };

@@ -8,10 +8,30 @@
 img,
 input {
     width: 100%;
+    vertical-align: top;
 }
 
 #wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #d0e4d1;
+    height: 100vh;
+}
+
+#carousel {
+    border: 1px lightseagreen dotted;
+}
+
+#carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.moveImg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: all .5s;
 }
